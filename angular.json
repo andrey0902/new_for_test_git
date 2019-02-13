@@ -24,7 +24,12 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest",
+              "src/sw-custom.js",
+              "src/ngsw-worker.js",
+              "src/sw-reminders.js",
+              "src/sw-master.js"
             ],
             "styles": [
               "src/styles.scss"
@@ -54,6 +59,16 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
+              ],
+              "serviceWorker": true,
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                "src/manifest.webmanifest",
+                "src/sw-custom.js",
+                "src/ngsw-worker.js",
+                "src/sw-reminders.js",
+                "src/sw-master.js"
               ]
             }
           }
@@ -88,7 +103,8 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ]
           }
         },
