@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const SERVER_URL = 'https://172.16.101.142:3020/subscription';
+const SERVER_URL = 'http://localhost:4055/subscription';
 
 @Injectable({
   providedIn: 'root'

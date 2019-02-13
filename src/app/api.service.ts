@@ -41,22 +41,22 @@ export  class  ApiService {
         console.log('oflline', event);
       })
 
-    swUpdate.available.subscribe(event => {
-      console.log('current version is', event.current);
-      console.log('available version is', event.available);
-    });
-    swUpdate.activated.subscribe(event => {
-      console.log('old version was', event.previous);
-      console.log('new version is', event.current);
-    });
-
-    fromEvent(window, 'beforeinstallprompt').subscribe((event) => {
-      console.warn('\'beforeinstallprompt\'', event);
-      this.promptEvent = event;
-    });
-    window.addEventListener('beforeinstallprompt', event => {
-      this.promptEvent = event;
-    });
+    // swUpdate.available.subscribe(event => {
+    //   console.log('current version is', event.current);
+    //   console.log('available version is', event.available);
+    // });
+    // swUpdate.activated.subscribe(event => {
+    //   console.log('old version was', event.previous);
+    //   console.log('new version is', event.current);
+    // });
+    //
+    // fromEvent(window, 'beforeinstallprompt').subscribe((event) => {
+    //   console.warn('\'beforeinstallprompt\'', event);
+    //   this.promptEvent = event;
+    // });
+    // window.addEventListener('beforeinstallprompt', event => {
+    //   this.promptEvent = event;
+    // });
   }
 
   fetch():  Observable<Item[]> {

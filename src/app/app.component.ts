@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SwPush } from '@angular/service-worker';
 import { ApiService } from './api.service';
-import { NewsletterService } from './news-letter.service';
+
 import { PushNotificationService } from './push-notification.service';
 import {Network} from '@ngx-pwa/offline';
 import {MockDataService} from './mock-data.service';
@@ -16,7 +16,7 @@ import {skip} from 'rxjs/operators';
 export class AppComponent implements OnInit {
   title = 'pwa';
   items: any[];
-  readonly VAPID_PUBLIC_KEY = 'BM1Q85AzSvQd1TBcuttyVYiD7YQtLM5XpFZc6eMhPze3q3VdHZHNrMYEczoFpbDcpNZ3fB7QWsqkXwLSrNr0sbs';
+  readonly VAPID_PUBLIC_KEY = 'BPLerFn87xcT_mV2wI--H-wBH9aBEgbYDmKMbMTSYTOxT4tHpzlegdg17FkqdWhWV01YqEnQ_RyF-It_SRatS0A';
 
   online$ = this.network.onlineChanges;
   constructor(public  apiService: ApiService,
@@ -56,7 +56,11 @@ export class AppComponent implements OnInit {
 
 
 
-
+  deleteS() {
+    this.swPush.unsubscribe().then((res) => {
+      console.log('unsubscribe', res);
+    })
+  }
 
 
 
